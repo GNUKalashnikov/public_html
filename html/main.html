@@ -1,1 +1,34 @@
 <!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title> Иван Калашников</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+      <div class="video_wrapper">
+        <video id="splashVideo" autoplay loop muted></video>
+    
+        <script async>
+            var video = document.getElementById("splashVideo");
+            if(screen.width < 480) {
+                video.src = "video.mp4"
+            } else {
+                video.src = "video.webm"
+            }
+    
+            video.load();
+        </script>
+        <noscript>
+            <video src="video.webm" autoplay="true" loop muted></video>
+        </noscript>
+    
+        <div class="video_shade">
+        </div>
+        <div class="hero">
+            <h1>Иван Калашников</h1>
+            <p>Under construction</p>
+        </div>
+    
+    </div>
+
+</body>

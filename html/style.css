@@ -1,0 +1,393 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Weirdly, comma-compounding these things breaks in chrome? */
+::selection {
+    background: #01A4A4;
+}
+
+::-moz-selection {
+    background: #01A4A4;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    font-family: 'Noto Serif', serif;
+}
+
+iframe:not(#fb_like_button) {
+    background-image: url("/images/ring.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+nav {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+}
+
+.sub li:hover,
+nav ul li:hover,
+nav ul li.active,
+nav ul .active div,
+.sub li.active {
+    background-color: #01A4A4;
+}
+
+nav ul li a:visited,
+nav ul li a:active,
+nav ul li a {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bolder;
+    color: inherit;
+    text-decoration: none;
+    font-stretch: extra-expanded;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 1em 2em 1em 2em;
+}
+
+nav ul * svg {
+    fill: currentColor;
+    height: 2em;
+    width: 2em;
+    margin: -10px 0 -10px 0;
+}
+
+@media(min-width: 1000px) {
+    .video_wrapper div.hero {
+        font-size: 250%;
+        top: 15%;
+    }
+
+    article,
+    section {
+        max-width: 50em;
+    }
+
+
+    body {
+        padding-bottom: 20rem;
+    }
+
+    footer * h1 {
+        font-family: "Noto Sans", sans-serif;
+        font-size: 150%;
+    }
+
+    footer * ul {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    footer * a,
+    footer * a:active,
+    footer * a:visited {
+        color: white;
+    }
+
+    footer {
+        display: block;
+        background-color: hsla(180,99%,24%,1); /* Slightly darker than the brand colour */
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        left:0;
+        width: 100%;
+    }
+
+    footer * .copy {
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+        font-size: 10px;
+    }
+
+    footer * .social {
+        text-align: center;
+    }
+
+    footer .content {
+        max-width: 960px;
+        margin: auto;
+        color: white;
+        padding: 0.5em;
+    }
+
+    .col {
+        width: 33%;
+        display: inline-block;
+        margin: 0;
+        float: left;
+    }
+
+    nav {
+        border-top: 3px solid #01A4A4;
+    }
+
+    .joinus {
+        float: right;
+        margin-right: 30px;
+    }
+
+    nav ul {
+        margin: 0 0 0 30px;
+        padding: 0;
+        display: inline-block;
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+
+    nav .sub {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        min-width: 160px;
+        z-index: 1;
+        margin-left: 0em;
+    }
+
+
+    .sub li, .sub-menu:hover .sub {
+        display: block;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .hamburger svg {
+        margin: 0;
+    }
+}
+
+@media(min-width: 2000px) {
+    article,
+    section {
+        max-width: 80em;
+    }
+}
+
+@media(max-width: 1000px) {
+    .video_wrapper div.hero {
+        font-size: 150%;
+        top: 0;
+    }
+
+    footer {
+        display: none;
+        visibility: collapse;
+    }
+
+    nav ul {
+        margin: 0;
+        padding-left: 0;
+    }
+
+    nav {
+        max-height: 2.9em;
+        overflow: hidden;
+        transition: max-height 0.3s;
+        border-top: none;
+    }
+
+    nav ul:first {
+        width: 0px;
+    }
+
+    nav .sub {
+        margin-left: 0em;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul div {
+        width: 100%;
+        margin: 0 0 -1em 0;
+    }
+
+    .sub li {
+        display: block;
+    }
+
+    li.sub-menu.active {
+        background-color: #333;
+    }
+
+    .sub  {
+        display: block;
+        margin-top: 1em;
+    }
+
+    .sub-menu:hover {
+        background-color: #333;
+    }
+
+    .sub-menu ul li {
+        padding-left: 0.5em;
+    }
+
+    .sub-menu ul li a::before {
+        content: "â–º"
+    }
+
+    .hamburger {
+        display: block;
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        fill: currentColor;
+    }
+
+    .hamburger svg {
+        margin-top: -2px;
+    }
+
+    .expand {
+        max-height: 50em;
+    }
+
+    .downarrow {
+      display: none;
+    }
+}
+
+article,
+section {
+    margin: 0 auto;
+    line-height: 1.5;
+    padding: 1em;
+    overflow-y: hidden;
+}
+
+.content img,
+article img,
+section img {
+    max-width: 100%;
+}
+.content-wide {
+    max-width: 960px;
+}
+
+article h1, article h2, article h3,
+article h4, article h5, article h6 {
+    font-family: "Noto Sans", sans-serif;
+    margin-bottom: 0.3em;
+}
+
+h1 a:visited, h1 a:active h1 , h1 a {
+    color: #000;
+    text-decoration: none;
+    font-size: 150%;
+}
+
+h1 a:hover {
+    text-decoration: underline;
+}
+
+time {
+    display: block;
+    margin-bottom: 1em;
+}
+
+figure {
+    width: 200px;
+    margin: 10px;
+    border-color: black;
+    clear: both;
+    overflow: auto;
+    display: inline-block;
+    padding: 30px 0 0 0;
+    font-size: 15px;
+}
+
+figure figcaption {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    font-family: "Noto Sans", sans-serif;
+}
+
+figure * a, figure * a:active {
+    color: #2a6496;
+    text-decoration: none;
+}
+
+figure * a:hover, figure * a:focus {
+    color: #2a6496;
+    text-decoration: underline;
+}
+
+figure img {
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.video_shade {
+    background-color: rgba(0,0,0,0.4);
+    background-position: -8px -8px;
+    background-size: 48px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.video_wrapper div.hero {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.video_wrapper {
+    positon: relative;
+}
+
+.video_wrapper, .video_wrapper video {
+    width: 100%;
+    object-fit: fill;
+    position: relative;
+    display: table;
+    max-width: 100%;
+    
+}
+
+video {
+    width: 100%;
+    max-width: 100%;
+}
+
+.downarrow {
+  display: none;
+}
+
