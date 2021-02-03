@@ -1,0 +1,39 @@
+Ivan Kalashnikov 09.01.21
+
+========================= Normal Mode ======================================
+==== Legend ==== 
+N = Number
+S = String
+================
+
+o/O = Start on a new line, with O being starting a new line above the cursor.
+gg = Top of the page.
+G = Bottom of the page.
+e = Move foward a word, cursor placed at the last letter of the word.
+b = Back one word. Nb Number of words back.
+Nw = number of words foward
+Nl = number of lines foward
+f/F = find the next instance of that letter in f(fowards) F(Backwards).
+Nf/F = Locate the N instance of that letter fowards or backwards
+w = Foward one word, Nw number of words foward.
+% = Seeks after the cursor the fist item in (), [], {}, but not <>.
+dd = deleting a line
+	- dN will delete the number of lines, either across or down
+	- dNe = deletes the number of words foward
+x = delete the character highlighted by the cursor, X deleting the leter to the left.
+/ = Search fowards for specific words, n is next, N back a word.
+? = Search behind the cursor (Similar to /)
+r = rename a single letter in normal mode.
+0 = Go to the start of the sentence.
+$ = Go to the end of the sentence.
+* = Find and go to the next occurence of the word highlighted by the cursor.
+# = The same as * only backwards in search.
+NiS = Number of something iterated and pasted either horizontally or latitude.
+. = Repeats the last inputed command
+
+==================== Visual Mode ==========================================
+v = to enter this mode
+Navigation = w,b,e,l for navigating
+d = for delete
+y = yank
+
